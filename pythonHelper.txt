@@ -25,3 +25,10 @@ if __name__ == "__main__":
 
 //running with 
 FLASK_APP=hello.py flask run
+
+
+//installing needed gcp properties
+pip3 install --upgrade google-cloud-storage
+
+//
+pip install -r requirements.txt

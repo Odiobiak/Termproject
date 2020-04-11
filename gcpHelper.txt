@@ -18,3 +18,7 @@ gs://dataproc-staging-us-west1-494286768598-sn2scqkt/output2
 hadoop fs -getmerge gs://dataproc-staging-us-west1-494286768598-sn2scqkt/output ./finaloutput.txt
 hadoop fs -copyFromLocal ./finaloutput.txt
 hadoop fs -cp ./finaloutput.txt gs://dataproc-staging-us-west1-494286768598-sn2scqkt/finaloutput.txt
+
+
+//setting envoroment
+set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\didyobiak\Downloads\termproject-273720-0d7405cf24f6.json"
