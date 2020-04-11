@@ -1,0 +1,27 @@
+//creating a flask-python enviroment
+//Try deleting the virtualenv you created. Then create a new virtualenv with:
+
+		virtualenv flask
+//Then:
+
+		cd flask
+//Now let's activate the virtualenv:
+
+		source bin/activate
+//Now you should see (flask) on the left of the command line.
+//Let's install flask:
+
+		pip install flask
+//Then create a file named hello.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+
+//running with 
+FLASK_APP=hello.py flask run

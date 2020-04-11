@@ -1,0 +1,20 @@
+//creating a job
+Region	
+us-west1
+Cluster	
+cluster1
+Job type	
+Hadoop
+Main class or jar	
+InvertedIndex
+Jar files	
+gs://dataproc-staging-us-west1-494286768598-sn2scqkt/JAR/invertedindex.jar
+Properties	
+Arguments	
+gs://dataproc-staging-us-west1-494286768598-sn2scqkt/Data/Hugo.tar.gz
+gs://dataproc-staging-us-west1-494286768598-sn2scqkt/output2
+
+//merging results
+hadoop fs -getmerge gs://dataproc-staging-us-west1-494286768598-sn2scqkt/output ./finaloutput.txt
+hadoop fs -copyFromLocal ./finaloutput.txt
+hadoop fs -cp ./finaloutput.txt gs://dataproc-staging-us-west1-494286768598-sn2scqkt/finaloutput.txt
