@@ -1,0 +1,10 @@
+
+
+// To build
+docker build -t docker-flask:latest .
+
+//To run 
+docker run --name flaskapp -v /Frontend:/app -p5000:5000 docker-flask:latest
+
+//Go to the on the browser
+http://localhost:5000/

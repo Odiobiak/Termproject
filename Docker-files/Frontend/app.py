@@ -1,13 +1,15 @@
 from flask import Flask
+from flask import render_template, url_for, redirect, request
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
-    return """
-<h1> Python Flask in Docker!</h1>
-<p>A sample web-app fo running Flask inside Docker.</p>
-"""
+    if request.method == 'POST':
+        # this will return the inverted index file
+        result = request.form
+    return render_template('layout.html', result=result)
 
 
 # launch the app if the script is involved as the main program
