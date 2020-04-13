@@ -3,11 +3,10 @@ University Of Pittsburgh Cloud Computing Term Project
 
 # What was completed
 - Run Inverted indices on gcp 
-- dataproc connect to gcp dataproc from local computer
+- dataproc connect to gcp from local computer
 - Run the front end on docker container(with out connecting to gcp)
-
-# unable to.. 
-run a docker container that connects to gcp dataproc(kept getting docker error)
+    - ****** Was eventually able to connect the docker container to gcp *******
+- connected the dockerized flask webapp to GCP
 
 # Item completed from Project Grading Criteria
 1. website implemented and executed on docker 
