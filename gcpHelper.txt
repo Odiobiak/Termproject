@@ -1,4 +1,4 @@
-//creating a job
+//creating a job on gcp
 Region	
 us-west1
 Cluster	
@@ -21,23 +21,12 @@ hadoop fs -cp ./finalall.txt gs://dataproc-staging-us-west1-494286768598-sn2scqk
 
 
 //setting envoroment
-set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\didyobiak\Downloads\termproject-273720-0d7405cf24f6.json"
-
 set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\odiche\Downloads\termproject-273720-0d7405cf24f6.json
-
-set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\odiche\Desktop\PITT\Spring 2020\CS 1660(Cloud)\Termproject\Docker-files\Frontend\termproject-273720-0d7405cf24f6.json"
 
 //to check enviroment on cmd
 set
 
-
-
-
-
-
-//sample jobs sample
-
-
+//sample jobs
 reference {
   project_id: "termproject-273720"
   job_id: "job-ae081dc7"
@@ -59,87 +48,7 @@ status {
     nanos: 506000000
   }
 }
-yarn_applications {
-  name: "inverted index"
-  state: FINISHED
-  progress: 1.0
-  tracking_url: "http://cluster1-m:8088/proxy/application_1586466495095_0003/"
-}
-status_history {
-  state: PENDING
-  state_start_time {
-    seconds: 1586508758
-    nanos: 590000000
-  }
-}
-status_history {
-  state: SETUP_DONE
-  state_start_time {
-    seconds: 1586508758
-    nanos: 647000000
-  }
-}
-status_history {
-  state: RUNNING
-  details: "Agent reported job success"
-  state_start_time {
-    seconds: 1586508758
-    nanos: 981000000
-  }
-}
+
 driver_control_files_uri: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/google-cloud-dataproc-metainfo/3d4db54c-3b47-4724-ae02-90b4b825d6df/jobs/job-ae081dc7/"
 driver_output_resource_uri: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/google-cloud-dataproc-metainfo/3d4db54c-3b47-4724-ae02-90b4b825d6df/jobs/job-ae081dc7/driveroutput"
 job_uuid: "dcfd66b0-5a45-4d01-95ad-59746b892118"
-
-reference {
-  project_id: "termproject-273720"
-  job_id: "job-53b52add"
-}
-placement {
-  cluster_name: "cluster1"
-  cluster_uuid: "3d4db54c-3b47-4724-ae02-90b4b825d6df"
-}
-hadoop_job {
-  main_class: "InvertedIndex"
-  args: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/Hugo"
-  args: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/output"
-  jar_file_uris: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/JAR/invertedindex.jar"
-}
-status {
-  state: DONE
-  state_start_time {
-    seconds: 1586507774
-    nanos: 333000000
-  }
-}
-yarn_applications {
-  name: "inverted index"
-  state: FINISHED
-  progress: 1.0
-  tracking_url: "http://cluster1-m:8088/proxy/application_1586466495095_0002/"
-}
-status_history {
-  state: PENDING
-  state_start_time {
-    seconds: 1586507737
-    nanos: 292000000
-  }
-}
-status_history {
-  state: SETUP_DONE
-  state_start_time {
-    seconds: 1586507737
-    nanos: 366000000
-  }
-}
-status_history {
-  state: RUNNING
-  details: "Agent reported job success"
-  state_start_time {
-    seconds: 1586507737
-    nanos: 682000000
-  }
-}
-driver_control_files_uri: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/google-cloud-dataproc-metainfo/3d4db54c-3b47-4724-ae02-90b4b825d6df/jobs/job-53b52add/"
-driver_output_resource_uri: "gs://dataproc-staging-us-west1-494286768598-sn2scqkt/google-cloud-dataproc-metainfo/3d4db54c-3b47-4724-ae02-90b4b825d6df/jobs/job-53b52add/driveroutput"
-job_uuid: "cca375c5-0bff-4831-9bb0-4ea581717c68"
