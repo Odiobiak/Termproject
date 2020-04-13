@@ -21,3 +21,6 @@ https://drive.google.com/file/d/1Ku7SZd4ZSgWf4HnLVe8-GJ3UsSBy-n3V/view?usp=shari
 # Link to the video of running the frontend dockerized application 
 https://drive.google.com/open?id=1qyl4mnLaniVuAk8dWtOqCNEDmb32f5Gn
 
+# Link to the video of the complete dockerized webapp(including gcp connection)
+https://drive.google.com/file/d/1e9AurFHaQmEtd1hbggUF59LhBpKrTJdn/view?usp=sharing
+
