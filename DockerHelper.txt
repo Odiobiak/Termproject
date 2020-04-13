@@ -1,10 +1,13 @@
-
-
 // To build
 docker build -t docker-flask:latest .
 
-//To run 
-docker run --name flaskapp -v /Frontend:/app -p5000:5000 docker-flask:latest
+// Setting the gcp gcloud enviroment on docker container
+docker run -ti --name gcloud-config-gcp1 google/cloud-sdk gcloud auth application-default login 
+//set the project name 
+docker run -ti --name gcloud-config-gcp1 google/cloud-sdk gcloud config set project <your-project-id>
 
-//Go to the on the browser
+// To run 
+docker run --rm -ti --volumes-from gcloud-config-gcp -v /Frontend:/app -p5000:5000 docker-flask:latest
+
+// Go to the on the browser
 http://localhost:5000/
