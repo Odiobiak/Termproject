@@ -7,36 +7,34 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+<style>
+    body {background-color: white;}
+    h1,h3   {color: black;}
+    p    {color: red;}
+    form {color: #8f177f}
+</style>
 </head>
 
 <body>
     <p style="text-align: center;">
-        <h1>Welcome to my Cloud Computing Term Project</h1>
+        <h1>Cloud Computing Term Project</h1>
     </p>
     <p>
-        <h3>This Applicatin returns the
+        <h3>This Application returns the
             <strong>Inverted Index</strong> of a choosen File
         </h3>
     </p>
     <p>Please select a file</p>
     <form action="{{ url_for('home') }}" method="POST">
-        <input type="Radio" id="file1" Name="Hugo.tar.gz">Hugo.tar.gz<br><br>
-        <input type="Radio" id="file2" Name="shakespeare.tag.gz">shakespeare.tag.gz<br><br>
-        <input type="Radio" id="file3" Name="Tolstoy.tar.gz">Tolstoy.tar.gz<br><br>
-        <input type="submit">
+        <input type="radio" id="file1" Name="Hugo.tar.gz" value="Hugo.tar.gz">Hugo.tar.gz<br><br>
+        <input type="radio" id="file2" Name="shakespeare.tar.gz" value="shakespeare.tar.gz">shakespeare.tar.gz<br><br>
+        <input type="radio" id="file3" Name="Tolstoy.tar.gz" value="Tolstoy.tar.gz">Tolstoy.tar.gz<br><br>
+        <input type="radio" id="all" Name="all" value="all">all<br><br>
+        <input type="submit" name="Submit" value="Submit"><br><br>
     </form>
-    {% for item in result %}
-    <p> {{ item }} </p>
-    {% endfor %}
 
-    <p>
-        {% for item in bucket %}
-        <p> {{ item }} </p>
-        {% endfor %}
-    </p>
+
 </body>
 
 </html>

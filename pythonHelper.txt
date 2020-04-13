@@ -1,3 +1,10 @@
+//setting virtual enviroment 
+cd your proj
+python -m venv venv
+//activate
+.\venv\Scripts\activate
+
+
 //creating a flask-python enviroment
 //Try deleting the virtualenv you created. Then create a new virtualenv with:
 
@@ -27,8 +34,12 @@ if __name__ == "__main__":
 FLASK_APP=hello.py flask run
 
 
+//remove venv
+$ rm -fr venv/
+
 //installing needed gcp properties
 pip3 install --upgrade google-cloud-storage
+pip3 install --upgrade google-cloud
 
 //
 pip install -r requirements.txt
