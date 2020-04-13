@@ -12,8 +12,9 @@ University Of Pittsburgh Cloud Computing Term Project
 1. website implemented and executed on docker 
     - Follow the instructions on the DockerHelper.txt file
     - Make sure have cd into the folder that holds this application.
-2. Inverted index mapreduce implementation and excution on teh cluster GCP
+2. Inverted index mapreduce implementation and excution on the clusterin GCP
     - It runs better if you are in a virtual enviroment. follow the instruction on pythonHelper.txt to create one.
+3. Dockerized webapp connection to gcp dataproc
 
 # Link to the video of running dataproc on local
 https://drive.google.com/file/d/1Ku7SZd4ZSgWf4HnLVe8-GJ3UsSBy-n3V/view?usp=sharing
